@@ -102,13 +102,13 @@ public class Game {
     private void dramaticCountdown() {
         try {
             System.out.print("\nRock");
-            Thread.sleep(400);
+            Thread.sleep(800);
             System.out.print("... Paper");
-            Thread.sleep(400);
+            Thread.sleep(800);
             System.out.println("... Scissors");
-            Thread.sleep(400);
+            Thread.sleep(800);
             System.out.println("... Shoot!\n");
-            Thread.sleep(200);
+            Thread.sleep(400);
         } catch (InterruptedException e) {
             //ignore
         }
