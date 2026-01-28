@@ -42,14 +42,14 @@ public class Game {
     }
 
     private void printWelcome() {
-        System.out.println("=== Play Rock-Paper-Scissors ===");
+        System.out.println("\n=== Play Rock-Paper-Scissors ===\n");
     }
 
     private AIPlayer.Difficulty chooseDifficulty() {
         System.out.println("Select AI Difficulty:");
         System.out.println("1. Easy");
         System.out.println("2. Medium");
-        System.out.println("3. Hard");
+        System.out.println("3. Hard\n");
 
         while (true) {
             int choice = getIntInput("Choose difficulty: ");
@@ -70,13 +70,13 @@ public class Game {
         System.out.println("\n=== Main Menu ===");
         System.out.println("1. Play Round");
         System.out.println("2. View Stats");
-        System.out.println("3. Exit");
+        System.out.println("3. Exit\n");
     }
 
     private void playRound() {
         System.out.println("\n1. Rock");
         System.out.println("2. Paper");
-        System.out.println("3. Scissors");
+        System.out.println("3. Scissors\n");
 
         int choice = getIntInput("Your move: ");
         Move playerMove = Move.fromInt(choice);
@@ -91,8 +91,8 @@ public class Game {
         Move computerMove = ai.getComputerMove();
         ai.recordPlayerMove(playerMove);
 
-        System.out.println("You played: " + playerMove);
-        System.out.println("Computer played: " + computerMove);
+        System.out.println("\nYou played: " + playerMove);
+        System.out.println("Computer played: \n" + computerMove);
 
         int result = compareMoves(playerMove, computerMove);
         updateStats(result);
@@ -159,18 +159,18 @@ public class Game {
 
     private void printRoundResult(int result) {
         if (result == 1) {
-            System.out.println("You win this round!");
+            System.out.println("\nYou win this round!");
         } else if (result == -1) {
-            System.out.println("Computer wins this round!");
+            System.out.println("\nComputer wins this round!");
         } else {
-            System.out.println("This round is a tie!");
+            System.out.println("\nThis round is a tie!");
         }
     }
 
     private void showStats() {
         int totalGames = playerWins + computerWins + ties;
 
-        System.out.println("\n=== Game Stats ===");
+        System.out.println("\n=== Game Stats ===\n");
         System.out.println("Total Games: " + totalGames);
         System.out.println("You: " + playerWins);
         System.out.println("Computer: " + computerWins);
@@ -181,7 +181,7 @@ public class Game {
             System.out.printf("Your Win Rate: %.1f%%\n", winRate);
         }
 
-        System.out.println("Longest Streak (either side): " + longestStreak);
+        System.out.println("Longest Streak (either side): " + longestStreak + "\n");
     }
 
     private int getIntInput(String message) {
