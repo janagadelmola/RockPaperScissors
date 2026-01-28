@@ -91,8 +91,8 @@ public class Game {
         Move computerMove = ai.getComputerMove();
         ai.recordPlayerMove(playerMove);
 
-        System.out.println("\nYou played: " + playerMove);
-        System.out.println("Computer played: \n" + computerMove);
+        System.out.println("You played: " + playerMove);
+        System.out.println("Computer played: " + computerMove);
 
         int result = compareMoves(playerMove, computerMove);
         updateStats(result);
