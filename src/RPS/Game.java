@@ -179,9 +179,9 @@ public class Game {
         if (totalGames > 0) {
             double winRate = (playerWins * 100) / totalGames;
             System.out.printf("Your Win Rate: %.1f%%\n", winRate);
-        } else {
-            System.out.println("Longest Streak (either side): " + longestStreak);
         }
+
+        System.out.println("Longest Streak (either side): " + longestStreak);
     }
 
     private int getIntInput(String message) {
