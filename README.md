@@ -5,7 +5,7 @@ This project demonstrates game logic, input handling, basic AI strategy, and sta
 
 ---
 
-## ✨ Features
+## Features
 
 Play Rock–Paper–Scissors with:
 
@@ -18,7 +18,7 @@ Simple menu system with clean console interaction.
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 RockPaperScissors/  
 └── src/  
