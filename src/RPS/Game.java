@@ -78,12 +78,19 @@ public class Game {
         System.out.println("2. Paper");
         System.out.println("3. Scissors\n");
 
-        int choice = getIntInput("Your move: ");
-        Move playerMove = Move.fromInt(choice);
+        Move playerMove = null;
 
-        if (playerMove == null) {
-            System.out.println("Invalid move.");
-            return;
+        while (playerMove == null) {
+        System.out.println("\n1. Rock");
+        System.out.println("2. Paper");
+        System.out.println("3. Scissors");
+
+        int choice = getIntInput("Your move: ");
+        playerMove = Move.fromInt(choice);
+
+            if (playerMove == null) {
+            System.out.println("Invalid move. Please choose 1, 2, or 3.");
+            }
         }
 
         dramaticCountdown();
